@@ -17,6 +17,7 @@ Pedro Polonea
 ___
 
 # Docker
+![Optional Text](./src/main/resources/image/8.png)
 O Docker é uma extensão da tecnologia de virtualização de software LXC (LinuX Containers) presente no Linux, é uma camada que fornece recursos para gerenciamento dos containers. Temos como características deste modelo de virtualização:
 
 * Compartilha recursos entre o root (kernel) e os containers, por este motivo não e um sistema de virtualização tradicional;
