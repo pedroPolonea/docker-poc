@@ -1,0 +1,38 @@
+docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=root -d mysql/mysql-server:8.0.16
+sudo docker exec -it mysql1 bash
+bash-4.2# ls /var/lib/mysql
+bash-4.2# mysql -uroot -p
+
+show databases;
+use test;
+show tables;
+show columns from employees;
+select * from employees;
+
+sudo docker image build -t mysql02 .
+
+------------------
+
+
+docker run --name MySql -e MYSQL_ROOT_PASSWORD=root -d mysql/mysql-server:5.7.26
+docker exec -it MySql bash
+
+sudo docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=root -d mysql/mysql-server:8.0.16
+
+
+
+docker run --name MySql -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0.16 -p 3000:3306
+docker exec -it MySql bash
+docker exec -it MySql mysql -u root -p bash
+mysql -uroot -p
+
+
+docker image build -t orders:0.0.1 .
+docker container run --name myOrders -p 8000:9000 orders:0.0.1
+
+-----------------------
+
+docker container exec -it [nome] ifconfig
+docker container exec -it orders-con-dcy ping 172.21.0.3
+
+

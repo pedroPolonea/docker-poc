@@ -1,0 +1,32 @@
+version: '3.3'
+networks:
+  database-net:
+    driver: bridge
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql-con
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=cartago
+      - MYSQL_USER=root
+      - MYSQL_DATABASE=employees
+    ports:
+      - 3304:3306
+    expose:
+      - 3304
+    networks:
+      - database-net
+  sqladmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: adm-mysql-con
+    depends_on:
+      - db
+    ports:
+      - 8008:80
+    expose:
+      - 8008
+    environment:
+      - PMA_ARBITRARY=1
+    networks:
+      - database-net
