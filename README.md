@@ -1,6 +1,21 @@
 # docker-poc
 Este projeto foi criado com o intuito de servir como insumo para praticar Docker.
 
+# Requirements
+* Spring Boot 2.x
+* Java 11
+* Docker instalado
+* Docker Compose instalado
+
+## :baby: Baby steps
+* Treinar os comando do Docker.
+
+## Current Version
+0.1
+___
+Pedro Polonea
+___
+
 # Docker
 O Docker é uma extensão da tecnologia de virtualização de software LXC (LinuX Containers) presente no Linux, é uma camada que fornece recursos para gerenciamento dos containers. Temos como características deste modelo de virtualização:
 
